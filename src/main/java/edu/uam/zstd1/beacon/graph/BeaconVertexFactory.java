@@ -19,7 +19,6 @@ public class BeaconVertexFactory<Beacon> implements VertexFactory<Beacon> {
 		Beacon result = vertices.get(counter);
 		counter++;
 		return result;
-
 	}
 
 }
