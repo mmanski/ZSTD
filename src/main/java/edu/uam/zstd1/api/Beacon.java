@@ -1,8 +1,10 @@
 package edu.uam.zstd1.api;
 
-public interface Beacon {
+import java.awt.geom.Point2D;
 
-	int getDistance(Beacon beacon);
+public interface Beacon {
+	
+	double getDistance(Beacon beacon);
 
 	/**
 	 *
@@ -11,4 +13,13 @@ public interface Beacon {
 	 * to it's range
 	 */
 	boolean isInterferring(Beacon beacon);
+	
+	void setX(double x);
+	void setY(double y);
+	double getX();
+	double getY();
+	void setRange(double r);	
+	double getRange();
+	
+	Point2D getLocation();
 }
