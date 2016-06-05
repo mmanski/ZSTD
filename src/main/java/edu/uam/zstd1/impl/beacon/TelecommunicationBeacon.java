@@ -1,6 +1,5 @@
 package edu.uam.zstd1.impl.beacon;
 
-import java.awt.Point;
 import java.awt.geom.Point2D;
 
 import edu.uam.zstd1.api.Beacon;

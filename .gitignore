@@ -1,5 +1,7 @@
 *.class
-
+.idea
+*~
+*.graphml
 target/*
 
 # Mobile Tools for Java (J2ME)
