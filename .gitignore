@@ -2,6 +2,8 @@
 .idea
 *~
 *.graphml
+*.iml
+.idea/*
 target/*
 
 # Mobile Tools for Java (J2ME)
