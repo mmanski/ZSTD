@@ -16,18 +16,17 @@ public class TelecommunicationBeacon implements Beacon {
             this.r = r;
         }
         
-	@Override
 	public double getDistance(Beacon beacon) {
 		return getLocation().distance(beacon.getLocation());
 	}
 
 	@Override
-	public boolean isInterferring(Beacon beacon) {
-		if (getDistance(beacon) < beacon.getRange()) {
-			return true;
-		}
-		
-		return false;
+	public boolean isInterferring(Beacon beacon) {            
+            double difference = Math.sqrt(Math.pow(this.x - beacon.getLocation().getX(), 2)
+                                + Math.pow(this.y - beacon.getLocation().getY(), 2));
+            
+            return Math.abs(this.r - beacon.getRange()) <= difference
+                    && difference <= Math.abs(this.r + beacon.getRange());
 	}
 	
 	public double getRange() {

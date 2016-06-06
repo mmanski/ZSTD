@@ -3,8 +3,6 @@ package edu.uam.zstd1.api;
 import java.awt.geom.Point2D;
 
 public interface Beacon {
-	
-	double getDistance(Beacon beacon);
 
 	/**
 	 *

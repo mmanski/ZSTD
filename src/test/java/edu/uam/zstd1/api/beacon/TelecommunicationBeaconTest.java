@@ -12,8 +12,8 @@ public class TelecommunicationBeaconTest {
 	@Test
 	public void test_if_returned_distance_is_proper() {
 
-		Beacon beacon1 = new TelecommunicationBeacon(2, 5, 5);
-		Beacon beacon2 = new TelecommunicationBeacon(5, 9, 10);
+		TelecommunicationBeacon beacon1 = new TelecommunicationBeacon(2, 5, 5);
+		TelecommunicationBeacon beacon2 = new TelecommunicationBeacon(5, 9, 10);
 
 		double expectedDistance = 5;
 		
@@ -28,7 +28,7 @@ public class TelecommunicationBeaconTest {
 
 		Beacon beacon = new TelecommunicationBeacon(2, 5, 5);
 		Beacon interferringBeacon = new TelecommunicationBeacon(5, 9, 6);
-		Beacon notInterferringBeacon = new TelecommunicationBeacon(7, 9, 15);
+		Beacon notInterferringBeacon = new TelecommunicationBeacon(7, 9, 7);
 
 		Assert.assertTrue("These beacons are interfering with theirselves!",
 			 beacon.isInterferring(interferringBeacon));
