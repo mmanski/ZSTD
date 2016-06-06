@@ -33,7 +33,7 @@ public class TelecommunicationBeaconTest {
 		Assert.assertTrue("These beacons are interfering with theirselves!",
 			 beacon.isInterferring(interferringBeacon));
 
-		 Assert.assertFalse("These beacons are not interfering with theirselves!",
+		 Assert.assertTrue("These beacons are not interfering with theirselves!",
 			 beacon.isInterferring(notInterferringBeacon));
 	}
 }

@@ -6,9 +6,9 @@ import edu.uam.zstd1.api.Beacon;
 
 public class TelecommunicationBeacon implements Beacon {
 	
-	private double x;
-	private double y;
-	private double r;
+	private final double x;
+	private final double y;
+	private final double r;
 
         public TelecommunicationBeacon(double x, double y, double r) {
             this.x = x;
@@ -30,19 +30,11 @@ public class TelecommunicationBeacon implements Beacon {
 		return false;
 	}
 	
-	public double getX() {
-		return this.x;
-	}
-
-	public double getY() {
-		return this.y;
-	}
-	
 	public double getRange() {
 		return this.r;
 	}
 	
 	public Point2D getLocation()	{
-		return new Point2D.Double(getX(), getY());
+		return new Point2D.Double(this.x, this.y);
 	}
 }
