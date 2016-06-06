@@ -12,8 +12,8 @@ public class TelecommunicationBeaconTest {
 	@Test
 	public void test_if_returned_distance_is_proper() {
 
-		TelecommunicationBeacon beacon1 = new TelecommunicationBeacon(2, 5, 5);
-		TelecommunicationBeacon beacon2 = new TelecommunicationBeacon(5, 9, 10);
+		Beacon beacon1 = new TelecommunicationBeacon(2, 5, 5);
+		Beacon beacon2 = new TelecommunicationBeacon(5, 9, 10);
 
 		double expectedDistance = 5;
 		
