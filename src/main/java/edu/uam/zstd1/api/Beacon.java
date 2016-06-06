@@ -15,4 +15,6 @@ public interface Beacon {
 	boolean isInterferring(Beacon beacon);
 	
 	Point2D getLocation();
+        
+        double getRange();
 }

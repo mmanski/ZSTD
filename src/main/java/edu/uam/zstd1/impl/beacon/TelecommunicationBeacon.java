@@ -23,7 +23,7 @@ public class TelecommunicationBeacon implements Beacon {
 
 	@Override
 	public boolean isInterferring(Beacon beacon) {
-		if (getDistance(beacon) < getRange()) {
+		if (getDistance(beacon) < beacon.getRange()) {
 			return true;
 		}
 		

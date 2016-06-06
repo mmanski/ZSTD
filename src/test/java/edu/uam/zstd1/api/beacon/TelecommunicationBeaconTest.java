@@ -26,8 +26,8 @@ public class TelecommunicationBeaconTest {
 	@Test
 	public void test_if_interrference_is_detected_properly() {
 
-		Beacon beacon = new TelecommunicationBeacon(2, 5, 6);
-		Beacon interferringBeacon = new TelecommunicationBeacon(5, 9, 5);
+		Beacon beacon = new TelecommunicationBeacon(2, 5, 5);
+		Beacon interferringBeacon = new TelecommunicationBeacon(5, 9, 6);
 		Beacon notInterferringBeacon = new TelecommunicationBeacon(7, 9, 15);
 
 		Assert.assertTrue("These beacons are interfering with theirselves!",
