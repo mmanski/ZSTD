@@ -6,10 +6,16 @@ import edu.uam.zstd1.api.Beacon;
 
 public class TelecommunicationBeacon implements Beacon {
 	
-	double x;
-	double y;
-	double r;
+	private double x;
+	private double y;
+	private double r;
 
+        public TelecommunicationBeacon(double x, double y, double r) {
+            this.x = x;
+            this.y = y;
+            this.r = r;
+        }
+        
 	@Override
 	public double getDistance(Beacon beacon) {
 		return getLocation().distance(beacon.getLocation());
@@ -17,24 +23,11 @@ public class TelecommunicationBeacon implements Beacon {
 
 	@Override
 	public boolean isInterferring(Beacon beacon) {
-		if (getDistance(beacon) < beacon.getRange()) {
+		if (getDistance(beacon) < getRange()) {
 			return true;
 		}
 		
 		return false;
-	}
-	
-	
-	public void setX(double x) {
-		this.x = x;
-	}
-
-	public void setY(double y) {
-		this.y = y;
-	}
-	
-	public void setRange(double r) {
-		this.r = r;
 	}
 	
 	public double getX() {

@@ -12,18 +12,10 @@ public class TelecommunicationBeaconTest {
 	@Test
 	public void test_if_returned_distance_is_proper() {
 
-		Beacon beacon1 = new TelecommunicationBeacon();
-		Beacon beacon2 = new TelecommunicationBeacon();
+		Beacon beacon1 = new TelecommunicationBeacon(2, 5, 5);
+		Beacon beacon2 = new TelecommunicationBeacon(5, 9, 10);
 
 		double expectedDistance = 5;
-		//int actualDistance = 5; //TODO smth like beacon1.getDistance(beacon2);
-		
-		beacon1.setX(2);
-		beacon1.setY(5);
-		beacon2.setX(5);
-		beacon2.setY(9);
-		beacon1.setRange(5);
-		beacon2.setRange(10);
 		
 		double actualDistance = beacon1.getDistance(beacon2);
 
@@ -34,26 +26,14 @@ public class TelecommunicationBeaconTest {
 	@Test
 	public void test_if_interrference_is_detected_properly() {
 
-		Beacon beacon = new TelecommunicationBeacon();
-		Beacon interferringBeacon = new TelecommunicationBeacon();
-		Beacon notInterferringBeacon = new TelecommunicationBeacon();
-
-		//to be deleted
-//		Assert.assertTrue(true);
-
-		beacon.setX(2);
-		beacon.setY(5);
-		interferringBeacon.setX(5);
-		interferringBeacon.setY(9);
-		notInterferringBeacon.setX(7);
-		notInterferringBeacon.setY(9);
-		interferringBeacon.setRange(6);
-		notInterferringBeacon.setRange(15);
+		Beacon beacon = new TelecommunicationBeacon(2, 5, 6);
+		Beacon interferringBeacon = new TelecommunicationBeacon(5, 9, 5);
+		Beacon notInterferringBeacon = new TelecommunicationBeacon(7, 9, 15);
 
 		Assert.assertTrue("These beacons are interfering with theirselves!",
 			 beacon.isInterferring(interferringBeacon));
 
-		 Assert.assertTrue("These beacons are not interfering with theirselves!",
+		 Assert.assertFalse("These beacons are not interfering with theirselves!",
 			 beacon.isInterferring(notInterferringBeacon));
 	}
 }
