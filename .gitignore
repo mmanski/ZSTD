@@ -8,7 +8,7 @@ target/*
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
-
+nbactions.xml
 # Package Files #
 *.jar
 *.war
